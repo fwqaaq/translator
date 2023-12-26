@@ -147,7 +147,7 @@ export class Translator {
   }
 
   /**
-   * @param {boolean} isOriginal Read translated text pronunciation only when `false`.(Dafault)
+   * @param {boolean} isOriginal Read translated text pronunciation only when `false`.(Default)
    */
   async audio(isOriginal = false) {
     const params = this.#getParams()
