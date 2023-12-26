@@ -147,7 +147,7 @@ export class Translator {
   }
 
   /**
-   * @param {boolean} isOriginal With input text pronunciation when true.
+   * @param {boolean} isOriginal Read translated text pronunciation only when `false`.(Dafault)
    */
   async audio(isOriginal = false) {
     const params = this.#getParams()
@@ -155,13 +155,11 @@ export class Translator {
     /**
      * @link [How to get the Google Translate audio link?](https://stackoverflow.com/questions/35002003/how-to-use-google-translate-tts-with-the-new-v2-api)
      */
-    const { text, lang } = (await this.translate()) as ResponseData
     params.set('client', 'tw-ob')
+
     if (!isOriginal) {
+      const { text } = (await this.translate()) as ResponseData
       params.set('q', text)
-      params.set('tl', this.target)
-    } else {
-      params.set('tl', lang)
     }
 
     const res = await fetch(`${Translator.audioUrl}?${params}`, {

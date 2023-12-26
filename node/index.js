@@ -52,7 +52,8 @@ class Translator {
         const res = await fetch(url, {
             headers: {
                 'User-Agent': Translator.USER_AGENT
-            }
+            },
+            mode: 'no-cors'
         });
         if (!res.ok) throw new ResponseError(`Failed to get Response: ${res.statusText}`);
         const data = await res.json();
@@ -83,7 +84,8 @@ class Translator {
         const res = await fetch(`${Translator.audioUrl}?${params}`, {
             headers: {
                 'User-Agent': Translator.USER_AGENT
-            }
+            },
+            mode: 'no-cors'
         });
         if (!res.ok) throw new ResponseError(`Failed to get Response: ${res.statusText}`);
         return res.blob();
