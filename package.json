@@ -1,6 +1,6 @@
 {
   "name": "@fwqaaq/translator",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Google translation API for JavaScript",
   "main": "node/index.js",
   "scripts": {

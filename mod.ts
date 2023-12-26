@@ -157,6 +157,12 @@ export class Translator {
      */
     params.set('client', 'tw-ob')
 
+    if (isOriginal) {
+      if (this.source === 'auto')
+        throw new TranslatorAPIError('Source language cannot be auto.')
+      params.set('tl', this.source)
+    }
+
     if (!isOriginal) {
       const { text } = (await this.translate()) as ResponseData
       params.set('q', text)

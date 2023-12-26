@@ -62,7 +62,7 @@ main()
   * `options`: `TranslateOptions` - (Optional) The options to use when translating.
 * **Methods**
   * `translate(isRaw: boolean)`: `Promise<ResponseData | Array<any>>` - Translates the text. If `isRaw` is true, returns raw response data. **Default is false.**
-  * `audio(isOriginal: boolean)`: `Promise<blob>` - Returns the blob. If `isOriginal` is true, using the original text to generate the audio, and set `target` to your target language. **Default is false**, read the translated text.
+  * `audio(isOriginal: boolean)`: `Promise<blob>` - Returns the blob. If `isOriginal` is true, using the original text to generate the audio, and set `source` to your target language. **Default is false**, read the translated text.
 * **TranslateOptions** Interface
   * `source`: `string` - Source language (default: `'auto'`).
   * `target`: `string` - Target language (default: `'en'`).
