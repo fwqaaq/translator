@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "compile": "deno bundle mod.ts > node/index.js"
+  },
+  "imports": {
+    "assert": "https://deno.land/std@0.209.0/assert/mod.ts"
+  }
+}

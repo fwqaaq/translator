@@ -1,0 +1,31 @@
+{
+  "name": "@fwqaaq/translator",
+  "version": "0.1.0",
+  "description": "Google translation API for JavaScript",
+  "main": "node/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwqaaq/translator.git"
+  },
+  "keywords": [
+    "Google",
+    "translate",
+    "Deno",
+    "Google",
+    "translator"
+  ],
+  "author": "fwqaaq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fwqaaq/translator/issues"
+  },
+  "files": [
+    "node/index.js",
+    "README.md"
+  ],
+  "homepage": "https://github.com/fwqaaq/translator#readme"
+}
