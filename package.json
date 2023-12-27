@@ -1,6 +1,6 @@
 {
   "name": "@fwqaaq/translator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Google translation API for JavaScript",
   "main": "node/index.js",
   "scripts": {
@@ -23,8 +23,9 @@
   "bugs": {
     "url": "https://github.com/fwqaaq/translator/issues"
   },
+  "types": "node/index.d.ts",
   "files": [
-    "node/index.js",
+    "node/**/*",
     "README.md"
   ],
   "homepage": "https://github.com/fwqaaq/translator#readme"
