@@ -1,9 +1,10 @@
 {
   "tasks": {
     "dev": "deno run --watch main.ts",
-    "compile": "deno bundle mod.ts > node/index.js"
+    "compile": "deno task declare && deno run -A scripts/build.ts",
+    "declare": "tsc -p . && cat node/error.d.ts node/translator.d.ts > node/index.d.ts && rm node/translator.d.ts node/error.d.ts"
   },
   "imports": {
-    "assert": "https://deno.land/std@0.209.0/assert/mod.ts"
+    "assert": "https://deno.land/std@0.209.0/assert/mod.ts",
   }
 }

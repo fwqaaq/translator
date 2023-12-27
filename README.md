@@ -47,8 +47,8 @@ const options = {
 };
 
 async function main() {
-  const translator = new Translator('你好', options);
-  const response = await translator.translate();
+  const translator = new Translator(options);
+  const response = await translator.translate("你好");
   console.log(response) // { lang: 'zh-CN', text: 'Hello' }
 }
 
@@ -58,11 +58,10 @@ main()
 ## API Reference
 
 * **Constructor**
-  * `text`: `string` - The source text to be translated.
   * `options`: `TranslateOptions` - (Optional) The options to use when translating.
 * **Methods**
-  * `translate(isRaw: boolean)`: `Promise<ResponseData | Array<any>>` - Translates the text. If `isRaw` is true, returns raw response data. **Default is false.**
-  * `audio(isOriginal: boolean)`: `Promise<blob>` - Returns the blob. If `isOriginal` is true, using the original text to generate the audio, and set `source` to your target language. **Default is false**, read the translated text.
+  * `translate(_text: string, isRaw: boolean)`: `Promise<ResponseData | Array<any>>` - Translates the text. If `isRaw` is true, returns raw response data. **Default is false.**
+  * `audio(_text: string, isOriginal: boolean)`: `Promise<blob>` - Returns the blob. If `isOriginal` is true, using the original text to generate the audio, and set `source` to your target language. **Default is false**, read the translated text.
 * **TranslateOptions** Interface
   * `source`: `string` - Source language (default: `'auto'`).
   * `target`: `string` - Target language (default: `'en'`).
