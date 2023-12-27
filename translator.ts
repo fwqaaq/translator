@@ -97,11 +97,6 @@ export class Translator {
    * @returns {string} The params of the google translate.
    */
   #getParams() {
-    if (this.source === this.target)
-      throw new TranslatorAPIError(
-        'Source and target languages cannot be the same.'
-      )
-
     return new URLSearchParams({
       sl: this.source,
       tl: this.target,
@@ -172,11 +167,6 @@ export class Translator {
       params.set('q', text)
     }
 
-    const res = await fetch(`${Translator.audioUrl}?${params}`, {
-      headers: { 'User-Agent': Translator.USER_AGENT },
-    })
-    if (!res.ok)
-      throw new ResponseError(`Failed to get Response: ${res.statusText}`)
-    return res.blob()
+    return `${Translator.audioUrl}?${params}`
   }
 }
